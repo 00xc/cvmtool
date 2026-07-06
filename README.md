@@ -82,6 +82,15 @@ cvmtool fetch-vcek --certs-dir certs/
 cvmtool fetch-pck --certs-dir certs/
 ```
 
+### Fetch Revocation List (SEV-SNP only, optional)
+
+To fetch the certificate revocation list for verification, use the `fetch-crl` command from within the CVM:
+
+```bash
+# Fetch CRL from AMD KDS
+cvmtool fetch-crl --certs-dir certs/
+```
+
 ## Azure CVM Support
 
 When built with the `azure` feature, cvmtool can retrieve attestation reports from Azure Confidential VMs via the vTPM (Virtual TPM). This works on Azure CVMs using either SNP or TDX isolation.
