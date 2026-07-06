@@ -58,8 +58,9 @@ certificate(s) are as follows:
     ark.{der, pem}
     ask.{der, pem}
     vcek.{der, pem}
+    crl.{der, pem} (optional)
 ```
-The `fetch-vcek` subcommand can be used to fetch these certificates from AMD's Key Distribution Service (KDS).
+The `fetch-vcek` and `fetch-crl` subcommands can be used to fetch these certificates from AMD's Key Distribution Service (KDS).
 - Intel TDX: Provisioning Certification Key (PCK), PCK Issuer Chain\*.
 ```
 {certs-dir} \
