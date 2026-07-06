@@ -91,7 +91,7 @@ pub fn get_processor_model(report: &AttestationReport) -> Result<ProcType> {
     match cpu_family {
         0x19 => match cpu_model {
             0x0..=0xF => Ok(ProcType::Milan),
-            0x10..=0x1F | 0xA0..0xAF => Ok(ProcType::Genoa),
+            0x10..=0x1F | 0xA0..=0xAF => Ok(ProcType::Genoa),
             _ => Err(anyhow::anyhow!("Processor model not supported")),
         },
         0x1A => match cpu_model {
